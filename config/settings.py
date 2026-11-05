@@ -36,18 +36,23 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    # Django applications
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+
+    # Third-party applications
     "rest_framework",
     "rest_framework_simplejwt",
     "corsheaders",
-    "accounts",
-]
 
+    # Local applications
+    "accounts",
+    "academics",
+]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -141,3 +146,5 @@ MAILERS = {
 
 
 AUTH_USER_MODEL = "accounts.User"
+
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
